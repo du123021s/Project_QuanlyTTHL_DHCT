@@ -1,0 +1,70 @@
+
+//===========Menu chính============================
+#header-background{
+     //thiết lập màu nền header màu xanh
+    -fx-background-color: #426EB4;
+}
+
+//định nghĩa cho thanh menu_header ẩn các chức năng phụ
+#header-background .menu_header{
+       -fx-background-color:#103667;
+  }
+
+// định nghĩa ma cho các button cua menu header
+.JFX_Button{
+      -fx-Text-Fill: #FFFBD1;
+      -fx-font-size:15px;
+      -fx-FontWeight:Regular;
+      -fx-font-family: Arial;
+}
+
+
+//=======menu ẩn trong mục plus(+) khi nhấn sẽ sổ ra===============
+.menu_Plus{
+    //sét màu xám tro
+  -fx-background-color: #C2C2C2;
+}
+#header-menu-plus{
+   //thiết lập màu nền trắng
+      -fx-background-color: #ECECEC;
+}
+
+.kieuchu_menu_plus{
+    -fx-Text-Fill: #103667;
+    -fx-font-size:15px;
+    -fx-FontWeight:Regular;
+    -fx-font-family: Arial;
+}
+
+
+
+//=================sub-menu của nút nguồi ba gạch=========================
+    // background cho sub-menu nguồn ba gạch
+  .mauNen_MenuNguon{
+      -fx-background-color:#7388C1;
+  }
+
+  // mau chu cho jfx button
+  .font_chu{
+    -fx-Text-Fill: #363636;
+    -fx-font-size: 15px;
+    -fx-FontWeight: bold;
+    -fx-font-family: Time new romans;
+  }
+
+//======================pane_MenuHome========================
+.maunen-PaneHome{
+     -fx-background-color:#ECECEC;
+}
+
+
+//==========Pane_MenuStudent====================================
+.maunen_paneStudent{
+   -fx-background-color:#FEEBD0;
+}
+
+
+//=============Pane_BookManager=====================================
+.maunen_PaneBookManager{
+   -fx-background-color:#A2007C;
+}
