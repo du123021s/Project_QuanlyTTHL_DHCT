@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class JDBCutil{
     public static java.sql.Connection ketnoi_JDBC() {
         // xác định đường link và thông số của mySQL
-        final String url = "jdbc:mysql://localhost:3306/Quanlythuvien2";
+        final String url = "jdbc:mysql://localhost:3306/LibManager";
         final String user ="root";
         final String password ="Huuphuc1995ct@";
 

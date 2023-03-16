@@ -1,22 +1,15 @@
 package Controller;
 
-import View.MainCode;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
-import java.awt.event.MouseEvent;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MyController implements Initializable {
+public class MainController implements Initializable {
 
     //subPane_Header tên cu giao diện khi ấn plus (+) sẽ chuyển qua
     @FXML
@@ -36,9 +29,6 @@ public class MyController implements Initializable {
     //khởi tạo tên cho Pane_menuBook
     @FXML
     private AnchorPane Pane_BookManager;
-
-
-
 
 
     //btn_add chính là tên code của nút "+" khi ấn chuyển giao diện
@@ -68,7 +58,7 @@ public class MyController implements Initializable {
 
 
 
-    // xây dựng method xử lý ẩn hiện các sub menu nguồn, menu header...
+    // xây dựng method xử lý ẩn hiện các sub menu nguồn, menu header...chuyển đổi qua lại các giao diện
     @FXML
     void chuyenGiaoDien_Header(ActionEvent event) {
         if(event.getSource() == btn_add){
@@ -116,4 +106,8 @@ public class MyController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    // xây method load dữ liệu lên table
+
+
 }

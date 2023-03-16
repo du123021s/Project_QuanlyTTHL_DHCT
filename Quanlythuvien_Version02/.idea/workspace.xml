@@ -2,48 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_9_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/MainCode.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanlythuvien_Version02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/MyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Data/JDBCutil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/BookCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Class.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Libr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Muiten.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Muiten2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Restart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Return.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Student.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/User_plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Youtube.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Sach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MainCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MainView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document/Form2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Form2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Home.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Home.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/Form/Form_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/View_Main/Main.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/View_Main/Main.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/View_Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Quanlythuvien_Version01/src/View_Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Query/Data_Lib.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Query/Data_Lib.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Document/GANTT.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib_JDBC/mysql-connector-java-8.0.30.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib_JDBC/protobuf-java-3.19.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Css/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Acount.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Anhnen_Lib.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Face_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Gamil_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Program_Testing/ProgramTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/Log_in.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Query_SQL/Data_Lib.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Query_SQL/Mô hình Diagram/Biểu đồ không có tiêu đề.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Query_SQL/Mô hình Diagram/so do data.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Query_SQL/ý tưởng csdl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/MainCode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quanlythuvien_Version02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Quanlythuvien_Version02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/MyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Data/JDBCutil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Data/JDBCutil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/JDBCutil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/JDBCutil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/Style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -79,8 +68,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/DO_AN_PROJECT/Project_java02/Quanlythuvien_Version02/src/Icon&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/DO_AN_PROJECT/Project_QuanlyTTHL_DHCT/Quanlythuvien_Version02/src/Icon&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
@@ -88,10 +77,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version02\src\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Qltv\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Qltv\Model" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version02\src\Css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="UngdungQLTV" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Program_Testing.ProgramTest" />
+      <module name="Quanlythuvien_Version02" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$Java_JDK$&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
