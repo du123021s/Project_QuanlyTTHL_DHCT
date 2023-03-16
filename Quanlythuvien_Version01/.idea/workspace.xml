@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Document/GANTT.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lib_JDBC/mysql-connector-java-8.0.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lib_JDBC/protobuf-java-3.19.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Css/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Acount.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Anhnen_Lib.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Face_Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Icon/Gamil_Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Program_Testing/ProgramTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Log_in.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Query_SQL/Data_Lib.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Query_SQL/Mô hình Diagram/Biểu đồ không có tiêu đề.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Query_SQL/Mô hình Diagram/so do data.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Query_SQL/ý tưởng csdl.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/MainCode.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quanlythuvien_Version02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Quanlythuvien_Version02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/MyController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Data/JDBCutil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Data/JDBCutil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/Style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/JDBCutil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/JDBCutil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MainCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/Style.css" afterDir="false" />
-    </list>
+    <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

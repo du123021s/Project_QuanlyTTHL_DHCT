@@ -72,7 +72,7 @@
                   <ColorAdjust brightness="-0.52" />
                </effect>
             </Separator>
-            <Button fx:id="btn_Signin" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" textFill="#dd1313" />
+            <Button fx:id="btn_Signin" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" textFill="#dd1313" />
             <ComboBox layoutX="118.0" layoutY="169.0" prefHeight="35.0" prefWidth="212.0" />
             <ImageView fitHeight="55.0" fitWidth="65.0" layoutX="50.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
