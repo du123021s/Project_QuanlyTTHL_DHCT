@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
       <AnchorPane prefHeight="650.0" prefWidth="481.0" styleClass="Mau_Menutrai" stylesheets="@../Css/Login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -72,7 +72,7 @@
                   <ColorAdjust brightness="-0.52" />
                </effect>
             </Separator>
-            <Button fx:id="btn_Signin" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" textFill="#dd1313" />
+            <Button fx:id="btn_SignIn" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onMouseExited="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" />
             <ComboBox layoutX="118.0" layoutY="169.0" prefHeight="35.0" prefWidth="212.0" />
             <ImageView fitHeight="55.0" fitWidth="65.0" layoutX="50.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>

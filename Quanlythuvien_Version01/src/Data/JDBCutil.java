@@ -13,7 +13,7 @@ public class JDBCutil{
 
         try {
             // đưng ký driver method kết nối JDBC
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             // tiến hành add link đk bên trên vào connection
             return DriverManager.getConnection(url,user,password);
         } catch (ClassNotFoundException e) {

@@ -16,8 +16,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 
-
-<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
       <AnchorPane prefHeight="650.0" prefWidth="481.0" styleClass="Mau_Menutrai" stylesheets="@../Css/Login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -34,9 +33,8 @@
          <children>
             <TextField fx:id="TxtUser" layoutX="45.0" layoutY="35.0" prefHeight="35.0" prefWidth="285.0" promptText="Username or Email" />
             <PasswordField fx:id="TxtPass" layoutX="46.0" layoutY="101.0" prefHeight="35.0" prefWidth="285.0" promptText="Password" />
-            <Label fx:id="label_thongbao" layoutX="87.0" layoutY="212.0" prefHeight="17.0" prefWidth="255.0" />
-            <Label layoutX="43.0" layoutY="244.0" text="Forgot Password" />
-            <Button fx:id="btn_SignIn" layoutX="188.0" layoutY="235.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="139.0" text="Sign In" />
+            <Label fx:id="label_thongbao" layoutX="71.0" layoutY="224.0" prefHeight="17.0" prefWidth="255.0" />
+            <Label layoutX="144.0" layoutY="261.0" text="Forgot Password" />
             <Separator layoutX="22.0" layoutY="287.0" prefHeight="2.0" prefWidth="323.0">
                <effect>
                   <ColorAdjust brightness="-0.52" />
@@ -74,7 +72,7 @@
                   <ColorAdjust brightness="-0.52" />
                </effect>
             </Separator>
-            <Button layoutX="67.0" layoutY="437.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="269.0" text="Sign Up" />
+            <Button fx:id="btn_SignIn" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onMouseExited="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" />
             <ComboBox layoutX="118.0" layoutY="169.0" prefHeight="35.0" prefWidth="212.0" />
             <ImageView fitHeight="55.0" fitWidth="65.0" layoutX="50.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>

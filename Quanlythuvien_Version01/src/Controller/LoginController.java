@@ -5,11 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
-import org.w3c.dom.Node;
+import javafx.scene.Node;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -20,6 +20,9 @@ import java.util.ResourceBundle;
 import javafx.scene.paint.Color;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
+
 
 import static java.awt.Color.*;
 
@@ -31,15 +34,16 @@ public class LoginController implements Initializable {
     private TextField TxtUser;
 
     @FXML
-    private TextField TxtPass;
+    private PasswordField TxtPass;
 
     @FXML
-    private Button btn_Signin;
+    private Button btn_SignIn;
 
     /// --
     Connection con =null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
+
 
 
     // contructor
@@ -52,11 +56,11 @@ public class LoginController implements Initializable {
     @FXML
     public void handleButtonAction(MouseEvent event) {
 
-        if (event.getSource() == btn_Signin) {
+        if (event.getSource() == btn_SignIn) {
             //login here
             if (logIn().equals("Success")) {
                 try {
-                    Stage stage = (Stage)((Node) event.getSource()).getScence().getWindow();
+                    Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                     //stage.setMaximized(true);
                     stage.close();
                     Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/View/MainView.fxml")));
@@ -75,10 +79,10 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         if (con == null) {
-            label_thongbao.setTextFill(color.red);
+            label_thongbao.setTextFill(javafx.scene.paint.Paint.valueOf("#990000"));
             label_thongbao.setText("Server Error : Check");
         } else {
-            label_thongbao.setTextFill(color.GREEN);
+            label_thongbao.setTextFill(javafx.scene.paint.Paint.valueOf("#00CC00"));
             label_thongbao.setText("Server is up : Good to go");
         }
     }
@@ -89,7 +93,7 @@ public class LoginController implements Initializable {
         String MemID = TxtUser.getText();
         String ManLoginPass = TxtPass.getText();
         if(MemID.isEmpty() || ManLoginPass.isEmpty()) {
-            setLabel_thongbao(color.red, "Empty credentials");
+            setLabel_thongbao(Color.valueOf("#990000"), "Empty credentials");
             status = "Error";
         } else {
             //query
@@ -100,10 +104,10 @@ public class LoginController implements Initializable {
                 preparedStatement.setString(2, ManLoginPass);
                 resultSet = preparedStatement.executeQuery();
                 if (!resultSet.next()) {
-                    setLabel_thongbao(color.red, "Enter Correct Email/Password");
+                    setLabel_thongbao(Color.valueOf("#990000"), "Enter Correct Email/Password");
                     status = "Error";
                 } else {
-                    setLabel_thongbao(color.GREEN, "Login Successful..Redirecting..");
+                    setLabel_thongbao(Color.valueOf("#00CC00"), "Login Successful..Redirecting..");
                 }
             } catch (SQLException ex) {
                 System.err.println(ex.getMessage());
@@ -119,4 +123,7 @@ public class LoginController implements Initializable {
         label_thongbao.setText(text);
         System.out.println(text);
     }
+
+
+
 }

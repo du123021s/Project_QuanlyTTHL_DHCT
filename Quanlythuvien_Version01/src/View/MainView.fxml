@@ -256,7 +256,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" layoutX="87.0" layoutY="130.0" prefHeight="40.0" prefWidth="110.0" styleClass="font_chu" stylesheets="@../Css/Style.css" text="Log out">
+                  <JFXButton fx:id="btn_LogOut" alignment="BASELINE_LEFT" layoutX="87.0" layoutY="130.0" onAction="#LogoutAction" prefHeight="40.0" prefWidth="110.0" styleClass="font_chu" stylesheets="@../Css/Style.css" text="Log out">
                      <font>
                         <Font name="Constantia Italic" size="15.0" />
                      </font>
