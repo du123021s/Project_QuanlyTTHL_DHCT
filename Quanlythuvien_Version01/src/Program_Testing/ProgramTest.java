@@ -39,7 +39,7 @@ public class ProgramTest extends Application {
 
 //        try {
 //            // link đg dẫn file đuôi .fxml vào .fxml như là swing jframe vậy còn controller đi theo gióng như chức năng khởi tạo tính năng cho chtrinh
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainView.fxml"));
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin.fxml"));
 //            //load sourd code kịch bản của file .fxml vào
 //            MyController myController = new MyController();
 //            // lk gắn kịch bản vào file  .fxml

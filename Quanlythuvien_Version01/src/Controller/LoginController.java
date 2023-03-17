@@ -1,15 +1,16 @@
 package Controller;
 
 import Data.JDBCutil;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -18,13 +19,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.scene.paint.Color;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.ComboBox;
 
-
-import static java.awt.Color.*;
 
 public class LoginController implements Initializable {
     @FXML
@@ -38,6 +35,15 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button btn_SignIn;
+
+
+    // tạo combobox: lựa chọn mức độk đăng nhập user hay admin
+    @FXML
+    private ComboBox<String> combo_UserType;
+
+    // thiết lập các trường items để sổ ra khi click vào combobox
+    ObservableList<String> userTypeList = FXCollections.observableArrayList("Reader", "Admin");
+
 
     /// --
     Connection con =null;
@@ -63,7 +69,17 @@ public class LoginController implements Initializable {
                     Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                     //stage.setMaximized(true);
                     stage.close();
-                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/View/MainView.fxml")));
+
+                    //Lấy giá trị của combobox
+                    String userType = combo_UserType.getValue().toString();
+
+                    Scene scene;
+                    if (userType.equals("Reader")) { // Kiểm tra loại tài khoản từ giá trị combobox vừa lấy
+                         scene = new Scene(FXMLLoader.load(getClass().getResource("/View/Reader.fxml")));
+                    } else {
+                        scene = new Scene(FXMLLoader.load(getClass().getResource("/View/Admin.fxml")));
+                    }
+
                     stage.setScene(scene);
                     stage.show();
 
@@ -75,6 +91,14 @@ public class LoginController implements Initializable {
         }
     }
 
+
+
+/*
+* Trong JavaFX, Initializable là một interface được sử dụng để khởi tạo các thành phần giao diện người dùng sau khi chúng đã được tạo ra.
+*  Interface này chứa một phương thức duy nhất initialize() được gọi khi tất cả các thành phần của giao diện người dùng đã được tạo.Khi một
+* đối tượng của một lớp điều khiển (controller class) được tạo, nó được liên kết với một tệp FXML và được tạo ra bằng cách sử dụng
+* FXMLLoader. Sau khi tất cả các thành phần được tạo ra, phương thức initialize() được gọi.
+* */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -85,29 +109,44 @@ public class LoginController implements Initializable {
             label_thongbao.setTextFill(javafx.scene.paint.Paint.valueOf("#00CC00"));
             label_thongbao.setText("Server is up : Good to go");
         }
+
+        // thiết lập các Item vừa khởi tạo cho vào combobox vữa tạo là combo_UserType ở interface initialize
+        combo_UserType.setItems(userTypeList);
     }
 
-    //we gonna use string to check for status
+
+
+
+    //Xây dựng method login
     private String logIn() {
+
+        String userType = combo_UserType.getValue();
+        String sql="";
+
+
         String status = "Success";
-        String MemID = TxtUser.getText();
-        String ManLoginPass = TxtPass.getText();
-        if(MemID.isEmpty() || ManLoginPass.isEmpty()) {
-            setLabel_thongbao(Color.valueOf("#990000"), "Empty credentials");
+        String UserName = TxtUser.getText();
+        String PassWord = TxtPass.getText();
+        if(UserName.isEmpty() || PassWord.isEmpty()) {
+            setLabel_thongbao(Color.valueOf("#990000"), "không được để trống UserName và PassWord!");
             status = "Error";
         } else {
-            //query
-            String sql = "SELECT * FROM ManagerLogin Where MemID = ? and  ManLoginPass= ?";
+
+            if(userType.equals("Reader")) {
+                sql = "SELECT * FROM ReaderLogin WHERE ReaderID = ? AND ReadPass = ?";
+            } else if(userType.equals("Admin")) {
+                sql = "SELECT * FROM ManagerLogin WHERE MemID = ? AND ManLoginPass = ?";
+            }
             try {
                 preparedStatement = con.prepareStatement(sql);
-                preparedStatement.setString(1, MemID);
-                preparedStatement.setString(2, ManLoginPass);
+                preparedStatement.setString(1, UserName);
+                preparedStatement.setString(2, PassWord);
                 resultSet = preparedStatement.executeQuery();
                 if (!resultSet.next()) {
-                    setLabel_thongbao(Color.valueOf("#990000"), "Enter Correct Email/Password");
+                    setLabel_thongbao(Color.valueOf("#990000"), "lỗi đăng nhập: vui lòng kiểm tra UserName và Password của bạn!");
                     status = "Error";
                 } else {
-                    setLabel_thongbao(Color.valueOf("#00CC00"), "Login Successful..Redirecting..");
+                    setLabel_thongbao(Color.valueOf("#00CC00"), "Yeah! mật khẩu và tên đăng nhập khớp rồi");
                 }
             } catch (SQLException ex) {
                 System.err.println(ex.getMessage());

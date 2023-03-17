@@ -73,7 +73,7 @@
                </effect>
             </Separator>
             <Button fx:id="btn_SignIn" layoutX="54.0" layoutY="446.0" mnemonicParsing="false" onMouseExited="#handleButtonAction" prefHeight="35.0" prefWidth="269.0" text="Sign In" />
-            <ComboBox layoutX="118.0" layoutY="169.0" prefHeight="35.0" prefWidth="212.0" />
+            <ComboBox fx:id="combo_UserType" layoutX="118.0" layoutY="169.0" prefHeight="35.0" prefWidth="212.0" />
             <ImageView fitHeight="55.0" fitWidth="65.0" layoutX="50.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Icon/Acount.png" />

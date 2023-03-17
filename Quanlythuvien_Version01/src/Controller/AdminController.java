@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
+public class AdminController implements Initializable {
 
     //subPane_Header tên cu giao diện khi ấn plus (+) sẽ chuyển qua
     @FXML
@@ -99,6 +99,7 @@ public class MainController implements Initializable {
 
             // thực hiện tiếp chức năng chuyển sub_menu: homepage và Student
         }else if(event.getSource()==btn_HomePage){
+            // code ntn để lúc nào chạy ctrinh đầu tiên cũng sẽ load Anchopane HomePage trc tiên
             Pane_Home.toFront();
         }else if(event.getSource() == btn_Student){
             Pane_Student.setVisible(true);
