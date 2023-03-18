@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program_Testing/ProgramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program_Testing/ProgramTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Log_in.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Log_in.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MainView.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +38,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "G:/DO_AN_PROJECT/Project_QuanlyTTHL_DHCT/Quanlythuvien_Version01/src/View",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "G:/DO_AN_PROJECT/Project_QuanlyTTHL_DHCT/Quanlythuvien_Version01",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pathVariables"
