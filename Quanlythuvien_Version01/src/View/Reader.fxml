@@ -7,23 +7,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReadeController">
    <children>
-      <AnchorPane fx:id="Pane_Home" layoutX="274.0" layoutY="-1.0" prefHeight="650.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox layoutX="24.0" layoutY="65.0" prefHeight="100.0" prefWidth="217.0">
-               <children>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="102.0" />
-               </children>
-            </HBox>
-         </children></AnchorPane>
+      <AnchorPane fx:id="Pane_Home" layoutX="274.0" layoutY="-1.0" prefHeight="650.0" prefWidth="727.0" styleClass="maunen_HomePage" stylesheets="@../Css/Reader.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane id="header-background" fx:id="menu_Header" prefHeight="600.0" prefWidth="271.0" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton fx:id="btn_HomePage" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="78.0" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="HomePage" AnchorPane.leftAnchor="57.0">
+            <JFXButton fx:id="btn_HomePage" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="78.0" onAction="#handleActionEvent" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="HomePage" AnchorPane.leftAnchor="57.0">
                <font>
                   <Font name="Constantia Italic" size="15.0" />
                </font>
@@ -38,7 +30,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" layoutX="57.0" layoutY="129.0" prefHeight="33.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Borrowing/Returning ">
+            <JFXButton fx:id="btn_Borr_Ret" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="129.0" onAction="#handleActionEvent" prefHeight="33.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Borrowing/Returning ">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -115,7 +107,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="btn_Option" alignment="BASELINE_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="596.0" prefHeight="40.0" prefWidth="46.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css">
+                  <JFXButton fx:id="btn_Option" alignment="BASELINE_LEFT" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="596.0" onAction="#handleActionEvent" prefHeight="40.0" prefWidth="46.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css">
                      <font>
                         <Font name="Constantia Italic" size="15.0" />
                      </font>
@@ -161,7 +153,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="btn_LogOut" alignment="BASELINE_LEFT" layoutX="87.0" layoutY="130.0" prefHeight="40.0" prefWidth="110.0" styleClass="font_chu" stylesheets="@../Css/Style.css" text="Log out">
+                  <JFXButton fx:id="btn_LogOut" alignment="BASELINE_LEFT" layoutX="87.0" layoutY="130.0" onAction="#handleActionEvent" prefHeight="40.0" prefWidth="110.0" styleClass="font_chu" stylesheets="@../Css/Style.css" text="Log out">
                      <font>
                         <Font name="Constantia Italic" size="15.0" />
                      </font>
@@ -203,6 +195,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="Pane_Borr_Ret" prefHeight="650.0" prefWidth="729.0" styleClass="maunen_Borro_returnPage" stylesheets="@../Css/Reader.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
    <opaqueInsets>
       <Insets top="2.0" />

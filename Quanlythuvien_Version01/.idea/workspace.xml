@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/ReadeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Css/Reader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Css/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Reader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Reader.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
