@@ -15,7 +15,7 @@
       <AnchorPane fx:id="Pane_Home" layoutX="274.0" layoutY="-1.0" prefHeight="650.0" prefWidth="727.0" styleClass="maunen_HomePage" stylesheets="@../Css/Reader.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane id="header-background" fx:id="menu_Header" prefHeight="600.0" prefWidth="271.0" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton fx:id="btn_HomePage" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="78.0" onAction="#handleActionEvent" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="HomePage" AnchorPane.leftAnchor="57.0">
+            <JFXButton fx:id="btn_HomePage" alignment="BASELINE_LEFT" layoutX="55.0" layoutY="117.0" onAction="#handleActionEvent" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="HomePage" AnchorPane.leftAnchor="55.0">
                <font>
                   <Font name="Constantia Italic" size="15.0" />
                </font>
@@ -30,7 +30,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btn_Borr_Ret" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="129.0" onAction="#handleActionEvent" prefHeight="33.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Borrowing/Returning ">
+            <JFXButton fx:id="btn_Borr_Ret" alignment="BASELINE_LEFT" layoutX="55.0" layoutY="168.0" onAction="#handleActionEvent" prefHeight="33.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Borrowing/Returning ">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -45,22 +45,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" layoutX="57.0" layoutY="179.0" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Chart">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="34.0" opacity="0.97" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="-4.0">
-                     <image>
-                        <Image url="@../Icon/Chart.png" />
-                     </image>
-                     <effect>
-                        <ColorAdjust brightness="0.71" contrast="-0.52" hue="0.09" />
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" layoutX="57.0" layoutY="227.0" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Discussion Room">
+            <JFXButton alignment="BASELINE_LEFT" layoutX="55.0" layoutY="214.0" prefHeight="40.0" prefWidth="206.0" styleClass="JFX_Button" stylesheets="@../Css/Style.css" text="Discussion Room">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

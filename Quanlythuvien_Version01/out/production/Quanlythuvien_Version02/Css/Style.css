@@ -42,6 +42,8 @@
     // background cho sub-menu nguồn ba gạch
   .mauNen_MenuNguon{
       -fx-background-color:#7388C1;
+      // bo  góc hình bầu cho hộp thoại Anchopane thay vi hinh vuong
+      -fx-background-radius:8px;
   }
 
   // mau chu cho jfx button
@@ -52,19 +54,64 @@
     -fx-font-family: Time new romans;
   }
 
+
+
+
 //======================pane_MenuHome========================
 .maunen-PaneHome{
-     -fx-background-color:#ECECEC;
+     -fx-background-color:#B7B7B7;
 }
+
+
+
+
+
 
 
 //==========Pane_MenuStudent====================================
 .maunen_paneStudent{
-   -fx-background-color:#FEEBD0;
+   -fx-background-color:#B7B7B7;
 }
+.maunen_subPane_ReaderLogin{
+  -fx-background-color: #AF4A92;
+}
+
+.maunen_subPane_Reader{
+  -fx-background-color: #555555;
+}
+
+.box{
+    -fx-background-color:#ECECEC;
+    // bo  góc hình bầu cho hộp thoại Anchopane
+    -fx-background-radius:8px;
+}
+.box_search{
+  //bo góc đẹp
+  -fx-background-radius:8px;
+}
+
+// tùy chỉnh cho table view của stuedentManager
+ .table_view{
+   -fx-background-color:#ECECEC;
+   -fx-background-radius:8px;
+   -fx-border-color:#103667;
+   -fx-border-radius: 10px;
+ }
+ .table_view .column_header{
+   -fx-background-color:#E54646;
+   -fx-font-size: 15px;
+   -fx-FontWeight: bold;
+   -fx-font-family: Time new romans;
+   -fx-border-color: black;
+   -fx-border-width: 1px;
+   -fx-border-radius:4px;
+ }
+
+
 
 
 //=============Pane_BookManager=====================================
 .maunen_PaneBookManager{
    -fx-background-color:#A2007C;
+
 }

@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2135824-2b29-4ef2-b938-b2ccd110eeba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ReadeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Css/Reader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Import.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Information.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/Insert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/clean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/infomation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/search2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Icon/update.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ReaderModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Css/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Css/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Model/Sach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/Model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quanlythuvien_Version02/View/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Css/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Sach.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Admin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Reader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Reader.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Query_SQL/Data_Lib.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "G:/DO_AN_PROJECT/Project_QuanlyTTHL_DHCT/Quanlythuvien_Version01",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pathVariables"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/DO_AN_PROJECT/Project_QuanlyTTHL_DHCT/Quanlythuvien_Version01/src/Icon&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version01\src\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version01\src\View" />
       <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version02\src\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Icon" />
       <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Qltv\Icon" />
-      <recent name="G:\DO_AN_PROJECT\Project_java02\Quanlythuvien_Version02\src\Qltv\Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\DO_AN_PROJECT\Project_QuanlyTTHL_DHCT\Quanlythuvien_Version02\src\Css" />

@@ -147,17 +147,25 @@ ALTER TABLE Books ADD CONSTRAINT FK09 FOREIGN KEY(PublisherID) REFERENCES Publis
  
 -- insert into table
 insert into Reader
-value('R01','Nguyen thi yen nhi','nu','1995-09-22','cantho','cantho','2022-09-17','2023-09-17')
+value('R01','Nguyễn thị yến nhi','nu','1995-09-22','cantho','cantho','2022-09-17','2023-09-17'),
+      ('R02','Trần hữu phúc','nu','1995-09-22','cần thơ',' cần thơ','2022-09-17','2023-09-17')
+      
+insert into Employee
+value('E01','Admin',0)
+
+insert into Member
+value('M01','E01','Trần Hữu Phúc','1995-09-22','Male','Trung Quốc',0962428167,'Bar113114','2023-09-12',4.0,'CMD9625468',0)
 
 insert into ManagerLogin
-value('A01','A21204','Huuphuc1995ct@') 
+value('M01','M01','Huuphuc1995ct@') 
 
 insert into ReaderLogin
-value('R1','R01','Yennhi1995ct@')
+value('RL01','R01','Yennhi1995ct@')
 
 -- select all table
 select * from ManagerLogin
 select * from ReaderLogin
+select * from Reader
 
 
 -- join các bảng

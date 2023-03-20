@@ -1,18 +1,30 @@
 package Controller;
 
+import Model.ReaderModel;
 import com.jfoenix.controls.JFXButton;
+import javafx.css.converter.StringConverter;
+import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
+import java.io.Reader;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+
 
 public class AdminController implements Initializable {
 
@@ -63,6 +75,36 @@ public class AdminController implements Initializable {
     // nút logut của menu option
     @FXML
     private JFXButton btn_LogOut;
+
+
+    // định nghi các nút button trong giao diện student manager
+    @FXML
+    private Button btn_ReaderLogin;
+
+    @FXML
+    private Button btn_ReaderTable;
+
+    @FXML
+    private AnchorPane subPane_Reader;
+
+    @FXML
+    private AnchorPane subPane_ReaderLogin;
+
+
+    //table
+    @FXML
+    private TableView<ReaderModel> table_Reader;
+
+    // định nghĩ tên ho datePicker
+    @FXML
+    private DatePicker datePicker1;
+    @FXML
+    private DatePicker datePicker2;
+    @FXML
+    private DatePicker datePicker3;
+
+
+
 
 
 
@@ -130,12 +172,58 @@ public class AdminController implements Initializable {
                 }
         }
     }
+
+
+
+
+    // xây dựng chuyển giao diện trong studentManager
+    @FXML
+    void changeButtonStudentManagement(ActionEvent event) {
+       if(event.getSource()==btn_ReaderTable){
+           subPane_Reader.setVisible(true);
+           subPane_Reader.toFront();
+       }else if(event.getSource()==btn_ReaderLogin){
+           subPane_ReaderLogin.setVisible(true);
+           subPane_ReaderLogin.toFront();
+       }
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        /* Tạo StringConverter để chuyển đổi giá trị DatePicker thành chuỗi theo định dạng yyyy-MM-dd*/
+        javafx.util.StringConverter<LocalDate> converter = new   javafx.util.StringConverter<LocalDate>() {
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+            @Override
+            public String toString(LocalDate date) {
+                if (date != null) {
+                    return dateFormatter.format(date);
+                } else {
+                    return "";
+                }
+            }
+
+            @Override
+            public LocalDate fromString(String string) {
+                if (string != null && !string.isEmpty()) {
+                    return LocalDate.parse(string, dateFormatter);
+                } else {
+                    return null;
+                }
+            }
+        };
+
+        // Đặt StringConverter cho DatePicker
+        datePicker1.setConverter(converter);
+        datePicker2.setConverter(converter);
+        datePicker3.setConverter(converter);
+        /*kết thúc chuyển đổi datePicker*/
+
     }
 
-    // xây method load dữ liệu lên table
+
 
 
 }

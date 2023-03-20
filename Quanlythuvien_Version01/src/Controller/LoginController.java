@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -41,6 +42,9 @@ public class LoginController implements Initializable {
     @FXML
     private ComboBox<String> combo_UserType;
 
+
+
+
     // thiết lập các trường items để sổ ra khi click vào combobox
     ObservableList<String> userTypeList = FXCollections.observableArrayList("Reader", "Admin");
 
@@ -66,7 +70,7 @@ public class LoginController implements Initializable {
             //login here
             if (logIn().equals("Success")) {
                 try {
-                    Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+                   Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                     //stage.setMaximized(true);
                     stage.close();
 
@@ -104,10 +108,10 @@ public class LoginController implements Initializable {
         // TODO
         if (con == null) {
             label_thongbao.setTextFill(javafx.scene.paint.Paint.valueOf("#990000"));
-            label_thongbao.setText("Server Error : Check");
+            label_thongbao.setText("Server Error : Vui lòng kiểm tra lại");
         } else {
             label_thongbao.setTextFill(javafx.scene.paint.Paint.valueOf("#00CC00"));
-            label_thongbao.setText("Server is up : Good to go");
+            label_thongbao.setText("Server Good:Bạn đăng nhập thành công");
         }
 
         // thiết lập các Item vừa khởi tạo cho vào combobox vữa tạo là combo_UserType ở interface initialize
@@ -135,7 +139,7 @@ public class LoginController implements Initializable {
             if(userType.equals("Reader")) {
                 sql = "SELECT * FROM ReaderLogin WHERE ReaderID = ? AND ReadPass = ?";
             } else if(userType.equals("Admin")) {
-                sql = "SELECT * FROM ManagerLogin WHERE MemID = ? AND ManLoginPass = ?";
+                sql = "SELECT * FROM InternalLogin WHERE MemID = ? AND InLogPass = ?";
             }
             try {
                 preparedStatement = con.prepareStatement(sql);
