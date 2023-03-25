@@ -3,106 +3,135 @@ package Model;
 import java.util.Date;
 
 public class ReaderModel {
-    private String ReaderID;
-    private String ReaderName;
-    private  char ReaderGender;
-    private Date DateOfBirth;
-    private String ReaderAddress;
-    private int ReaderPhone;
-    private Date ReadRegistrationDate;
-    private Date  ReadExpirationDate;
-    private String Barcode;
-
+    private String readerid;
+    private String empid;
+    private String readername;
+    private Date birth;
+    private String gender;
+    private String address;
+    private int phone;
+    private Date registrationdate;
+    private Date deadlinedate;
+    private String barcode;
+    private String image;
 
     // contructor
 
 
-    public ReaderModel(String readerID, String readerName, char readerGender, Date dateOfBirth,
-                       String readerAddress, int readerPhone, Date readRegistrationDate,
-                       Date readExpirationDate, String barcode) {
-        ReaderID = readerID;
-        ReaderName = readerName;
-        ReaderGender = readerGender;
-        DateOfBirth = dateOfBirth;
-        ReaderAddress = readerAddress;
-        ReaderPhone = readerPhone;
-        ReadRegistrationDate = readRegistrationDate;
-        ReadExpirationDate = readExpirationDate;
-        Barcode = barcode;
+    public ReaderModel() {
+
+    }
+
+    public ReaderModel(String readerid, String empid, String readername, Date birth, String gender,
+                       String address, int phone, Date registrationdate, Date deadlinedate, String barcode,
+                       String image) {
+        this.readerid = readerid;
+        this.empid = empid;
+        this.readername = readername;
+        this.birth = birth;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
+        this.registrationdate = registrationdate;
+        this.deadlinedate = deadlinedate;
+        this.barcode = barcode;
+        this.image= image;
+
     }
 
 
-    // getter and setter
+    //getter
 
-    public String getReaderID() {
-        return ReaderID;
+
+    public String getReaderid() {
+        return readerid;
     }
 
-    public void setReaderID(String readerID) {
-        ReaderID = readerID;
+    public String getEmpid() {
+        return empid;
     }
 
-    public String getReaderName() {
-        return ReaderName;
+    public String getReadername() {
+        return readername;
     }
 
-    public void setReaderName(String readerName) {
-        ReaderName = readerName;
+    public Date getBirth() {
+        return birth;
     }
 
-    public char getReaderGender() {
-        return ReaderGender;
+    public String getGender() {
+        return gender;
     }
 
-    public void setReaderGender(char readerGender) {
-        ReaderGender = readerGender;
+    public String getAddress() {
+        return address;
     }
 
-    public Date getDateOfBirth() {
-        return DateOfBirth;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        DateOfBirth = dateOfBirth;
+    public Date getRegistrationdate() {
+        return registrationdate;
     }
 
-    public String getReaderAddress() {
-        return ReaderAddress;
-    }
-
-    public void setReaderAddress(String readerAddress) {
-        ReaderAddress = readerAddress;
-    }
-
-    public int getReaderPhone() {
-        return ReaderPhone;
-    }
-
-    public void setReaderPhone(int readerPhone) {
-        ReaderPhone = readerPhone;
-    }
-
-    public Date getReadRegistrationDate() {
-        return ReadRegistrationDate;
-    }
-
-    public void setReadRegistrationDate(Date readRegistrationDate) {
-        ReadRegistrationDate = readRegistrationDate;
-    }
-
-    public Date getReadExpirationDate() {
-        return ReadExpirationDate;
-    }
-
-    public void setReadExpirationDate(Date readExpirationDate) {
-        ReadExpirationDate = readExpirationDate;
+    public Date getDeadlinedate() {
+        return deadlinedate;
     }
 
     public String getBarcode() {
-        return Barcode;
+        return barcode;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+
+
+    // settter
+
+    public void setReaderid(String readerid) {
+        this.readerid = readerid;
+    }
+
+    public void setEmpid(String empid) {
+        this.empid = empid;
+    }
+
+    public void setReadername(String readername) {
+        this.readername = readername;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public void setRegistrationdate(Date registrationdate) {
+        this.registrationdate = registrationdate;
+    }
+
+    public void setDeadlinedate(Date deadlinedate) {
+        this.deadlinedate = deadlinedate;
     }
 
     public void setBarcode(String barcode) {
-        Barcode = barcode;
+        this.barcode = barcode;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

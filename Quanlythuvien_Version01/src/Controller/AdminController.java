@@ -1,19 +1,22 @@
 package Controller;
 
+import Data.JDBCutil;
 import Model.ReaderModel;
 import com.jfoenix.controls.JFXButton;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.css.converter.StringConverter;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -21,9 +24,16 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.Reader;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.ResourceBundle;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 
 public class AdminController implements Initializable {
@@ -91,19 +101,45 @@ public class AdminController implements Initializable {
     private AnchorPane subPane_ReaderLogin;
 
 
-    //table
+    //tableview javafx
     @FXML
-    private TableView<ReaderModel> table_Reader;
+    private TableView<ReaderModel> table_reader;
 
-    // định nghĩ tên ho datePicker
+    @FXML
+    private TableColumn<ReaderModel,String> column_ID;
+    @FXML
+    private TableColumn<ReaderModel,String> column_EmpID;
+    @FXML
+    private TableColumn<ReaderModel,String> column_Name;
+    @FXML
+    private TableColumn<ReaderModel,String> column_Gender;
+    @FXML
+    private TableColumn<ReaderModel, Date> column_Birth;
+    @FXML
+    private TableColumn<ReaderModel,String> column_Address;
+    @FXML
+    private TableColumn<ReaderModel, Integer> column_Phone;
+    @FXML
+    private TableColumn<ReaderModel,Date> column_RDate;
+    @FXML
+    private TableColumn<ReaderModel,Date> column_DDate;
+    @FXML
+    private TableColumn<ReaderModel,String> column_Barcode;
+
+
+    // combobox
+    @FXML
+    private ComboBox<String> combobox_Gender;
+    // thiết lập các trường items để sổ ra khi click vào combobox
+    ObservableList<String> typeList = FXCollections.observableArrayList("Male", "Female");
+
+    // định nghĩa tên  datePicker
     @FXML
     private DatePicker datePicker1;
     @FXML
     private DatePicker datePicker2;
     @FXML
     private DatePicker datePicker3;
-
-
 
 
 
@@ -176,7 +212,7 @@ public class AdminController implements Initializable {
 
 
 
-    // xây dựng chuyển giao diện trong studentManager
+    // xây dựng chuyển giao diện trong Anchopane studentManager
     @FXML
     void changeButtonStudentManagement(ActionEvent event) {
        if(event.getSource()==btn_ReaderTable){
@@ -189,6 +225,91 @@ public class AdminController implements Initializable {
     }
 
 
+
+
+    /* xây dựng method load sql table Reader trong sql lên giao diện javafx*/
+     // lấy dl từ sql
+   public ObservableList<ReaderModel> AddReaderTable(){
+        ObservableList<ReaderModel> ListData = FXCollections.observableArrayList();
+         Connection conect = JDBCutil.ketnoi_JDBC();
+
+        try{
+            String sql = "select * from Reader";
+            PreparedStatement prepare = conect.prepareStatement(sql);
+             ResultSet rs = prepare.executeQuery();
+            while(rs.next()){
+                // hàm này load dl trực tiếp tử sq
+//                ReaderModel readerModel = new ReaderModel(
+//                        rs.getString("ReaderID"), rs.getString("EmpID"),
+//                        rs.getString("ReaderName"), rs.getDate("DateOfBirth"),
+//                        rs.getString("ReaderGender"), rs.getString("ReaderAddress"),
+//                        rs.getInt("ReaderPhone"),
+//                        rs.getDate("RegistrationDate"), rs.getDate("DeadlineDate"),
+//                        rs.getString("ReaderBarCode"), rs.getString("ReaderImage")
+//                );
+                ReaderModel readerModel = new ReaderModel();
+
+                readerModel.setReaderid(rs.getString("ReaderID"));
+                readerModel.setEmpid(rs.getString("EmpID"));
+                readerModel.setReadername(rs.getString("ReaderName"));
+                readerModel.setBirth(rs.getDate("DateOfBirth"));
+                readerModel.setGender(rs.getString("ReaderGender"));
+                readerModel.setAddress(rs.getString("ReaderAddress"));
+                readerModel.setPhone(rs.getInt("ReaderPhone"));
+                readerModel.setRegistrationdate(rs.getDate("RegistrationDate"));
+                readerModel.setDeadlinedate(rs.getDate("DeadlineDate"));
+                readerModel.setBarcode(rs.getString("ReaderBarCode"));
+
+
+                ListData.add(readerModel);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+       return ListData;
+   }
+
+      // load dl từ sql đưa lên table view
+
+    private ObservableList<ReaderModel> ListshowData;
+   public void showReaderTable(){
+       // hàm này nhận dl từ sql thiết đặt cho readerModel ở các hàm get set
+       ListshowData = AddReaderTable();
+       column_ID.setCellValueFactory(new PropertyValueFactory<>("readerid"));
+       column_EmpID.setCellValueFactory(new PropertyValueFactory<>("empid"));
+       column_Name.setCellValueFactory(new PropertyValueFactory<>("readername"));
+       column_Birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
+       column_Gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+       column_Address.setCellValueFactory(new PropertyValueFactory<>("address"));
+       column_Phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
+       column_RDate.setCellValueFactory(new PropertyValueFactory<>("registrationdate"));
+       column_DDate.setCellValueFactory(new PropertyValueFactory<>("deadlinedate"));
+       column_Barcode.setCellValueFactory(new PropertyValueFactory<>("barcode"));
+
+       table_reader.setItems(ListshowData);
+   }
+    /* kết thúc method load sql table Reader*/
+
+
+
+
+    /*xây dựng method selctItem_Reader -> load khi ấn chọ data hiển thị lên các textfiled...*/
+    public void selectItem_Reader(){
+
+    }
+    /*end method selectItem_Reader*/
+
+
+
+
+    /*
+     * Trong JavaFX, Initializable là một interface được sử dụng để khởi tạo các thành phần giao diện người dùng sau khi chúng đã được tạo ra.
+     *  Interface này chứa một phương thức duy nhất initialize() được gọi khi tất cả các thành phần của giao diện người dùng đã được tạo.Khi một
+     * đối tượng của một lớp điều khiển (controller class) được tạo, nó được liên kết với một tệp FXML và được tạo ra bằng cách sử dụng
+     * FXMLLoader. Sau khi tất cả các thành phần được tạo ra, phương thức initialize() được gọi. thực hiện các thao tác khởi tạo trước khi cửa sổ hoặc
+     *  màn hình được hiển thị cho người dùng. Bên trong phương thức initialize(), bạn có thể thực hiện các thao tác khởi tạo đối tượng, thiết lập dữ liệu
+     *  ban đầu, gắn các xử lý sự kiện và các thao tác khởi tạo khác.
+     * */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -221,9 +342,18 @@ public class AdminController implements Initializable {
         datePicker3.setConverter(converter);
         /*kết thúc chuyển đổi datePicker*/
 
-    }
 
+        /*load showReaderTable() đưa dl lên table,,,method initilize() gọi showReaderTable() và thực hiện các thao tác khởi tạo
+        trước khi cửa sổ hoặc màn hình được hiển thị cho người dùng*/
+        showReaderTable();
+
+        // add combobox lên giao diện
+        combobox_Gender.setItems(typeList);
+
+    }
+   /*end method initialize()*/
 
 
 
 }
+/*end program*/

@@ -73,12 +73,13 @@
    -fx-background-color:#B7B7B7;
 }
 .maunen_subPane_ReaderLogin{
-  -fx-background-color: #AF4A92;
+  -fx-background-color:  #555555;
 }
 
 .maunen_subPane_Reader{
   -fx-background-color: #555555;
 }
+
 
 .box{
     -fx-background-color:#ECECEC;
@@ -97,14 +98,27 @@
    -fx-border-color:#103667;
    -fx-border-radius: 10px;
  }
- .table_view .column_header{
+ .table_view .column-header-background{
    -fx-background-color:#E54646;
    -fx-font-size: 15px;
-   -fx-FontWeight: bold;
-   -fx-font-family: Time new romans;
-   -fx-border-color: black;
-   -fx-border-width: 1px;
-   -fx-border-radius:4px;
+ }
+ .table_view .column-header{
+      // tính nanwhg transparent thừa kế màu từ thuộc tính cha
+     -fx-background-color:transparent;
+     -fx-border-color: black;
+     -fx-border-width: 0.2px;
+      -fx-border-radius: 8px;
+
+ }
+ .table_view .column-header .label{
+     -fx-text-fill: #ffff;
+ }
+
+ // khung load img đa diện
+ .image_Student{
+   -fx-border-radius: 8px;
+   -fx-border-color:#B2001F;
+   -fx-border-width: 2px;
  }
 
 

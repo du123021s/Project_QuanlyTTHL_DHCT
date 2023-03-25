@@ -63,6 +63,7 @@ public class LoginController implements Initializable {
     }
 
 
+    // method xử lý login đăng nhập
     @FXML
     public void handleButtonAction(MouseEvent event) {
 
@@ -101,7 +102,9 @@ public class LoginController implements Initializable {
 * Trong JavaFX, Initializable là một interface được sử dụng để khởi tạo các thành phần giao diện người dùng sau khi chúng đã được tạo ra.
 *  Interface này chứa một phương thức duy nhất initialize() được gọi khi tất cả các thành phần của giao diện người dùng đã được tạo.Khi một
 * đối tượng của một lớp điều khiển (controller class) được tạo, nó được liên kết với một tệp FXML và được tạo ra bằng cách sử dụng
-* FXMLLoader. Sau khi tất cả các thành phần được tạo ra, phương thức initialize() được gọi.
+* FXMLLoader. Sau khi tất cả các thành phần được tạo ra, phương thức initialize() được gọi. thực hiện các thao tác khởi tạo trước khi cửa sổ hoặc
+*  màn hình được hiển thị cho người dùng. Bên trong phương thức initialize(), bạn có thể thực hiện các thao tác khởi tạo đối tượng, thiết lập dữ liệu
+*  ban đầu, gắn các xử lý sự kiện và các thao tác khởi tạo khác.
 * */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -137,9 +140,9 @@ public class LoginController implements Initializable {
         } else {
 
             if(userType.equals("Reader")) {
-                sql = "SELECT * FROM ReaderLogin WHERE ReaderID = ? AND ReadPass = ?";
+                sql = "SELECT * FROM ReaderLogin WHERE ReaderID = ? AND ReadLogPass = ?";
             } else if(userType.equals("Admin")) {
-                sql = "SELECT * FROM InternalLogin WHERE MemID = ? AND InLogPass = ?";
+                sql = "SELECT * FROM InternalLogin WHERE EmpID = ? AND InLogPass = ?";
             }
             try {
                 preparedStatement = con.prepareStatement(sql);
@@ -161,6 +164,8 @@ public class LoginController implements Initializable {
         return status;
     }
 
+
+// set label thông báo
     private void setLabel_thongbao(Color color, String text) {
         label_thongbao.setTextFill(color);
         label_thongbao.setText(text);

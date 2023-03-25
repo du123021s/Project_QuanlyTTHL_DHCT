@@ -22,13 +22,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminController">
    <children>
       <AnchorPane fx:id="Pane_Home" layoutX="274.0" layoutY="-1.0" prefHeight="650.0" prefWidth="727.0" styleClass="maunen-PaneHome" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane fx:id="Pane_Student" prefHeight="650.0" prefWidth="729.0" styleClass="maunen_paneStudent" stylesheets="@../Css/Style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="Pane_Student" prefHeight="650.0" prefWidth="729.0" styleClass="maunen_paneStudent" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="subPane_Reader" layoutX="14.0" layoutY="40.0" prefHeight="610.0" prefWidth="929.0" styleClass="maunen_subPane_Reader" stylesheets="@../Css/Style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+            <AnchorPane fx:id="subPane_Reader" layoutX="14.0" layoutY="40.0" prefHeight="610.0" prefWidth="929.0" styleClass="maunen_subPane_Reader" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="289.0" styleClass="box" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                  <AnchorPane layoutX="25.0" layoutY="10.0" prefHeight="200.0" prefWidth="289.0" styleClass="box" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="10.0">
                      <children>
-                        <AnchorPane layoutX="78.0" layoutY="14.0" prefHeight="137.0" prefWidth="118.0">
+                        <AnchorPane layoutX="78.0" layoutY="14.0" prefHeight="137.0" prefWidth="118.0" styleClass="image_Student" stylesheets="@../Css/Style.css">
                            <children>
                               <ImageView fitHeight="145.0" fitWidth="118.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <image>
@@ -37,7 +37,7 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <JFXButton layoutX="38.0" layoutY="157.0" prefHeight="25.0" prefWidth="80.0" text="Import">
+                        <JFXButton layoutX="50.0" layoutY="157.0" prefHeight="25.0" prefWidth="80.0" text="Import">
                            <graphic>
                               <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -46,7 +46,7 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="122.0" layoutY="157.0" prefHeight="31.0" prefWidth="118.0" text="Information">
+                        <JFXButton layoutX="129.0" layoutY="157.0" prefHeight="31.0" prefWidth="118.0" text="Information">
                            <graphic>
                               <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -69,7 +69,7 @@
                         <Label layoutX="39.0" layoutY="426.0" text="ExpirationDate" />
                         <Label layoutX="37.0" layoutY="460.0" text="ReaderBarCode" />
                         <TextField layoutX="128.0" layoutY="456.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
-                        <ComboBox layoutX="127.0" layoutY="271.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
+                        <ComboBox fx:id="combobox_Gender" layoutX="127.0" layoutY="271.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
                         <DatePicker fx:id="datePicker1" layoutX="128.0" layoutY="300.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
                         <DatePicker fx:id="datePicker2" layoutX="127.0" layoutY="393.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
                         <DatePicker fx:id="datePicker3" layoutX="128.0" layoutY="422.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="149.0" />
@@ -82,11 +82,11 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="100.0" layoutY="535.0" text="Clean" AnchorPane.bottomAnchor="25.0">
+                        <JFXButton layoutX="100.0" layoutY="535.0" text="Update" AnchorPane.bottomAnchor="25.0">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Icon/clean.png" />
+                                    <Image url="@../Icon/Refresh.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -114,28 +114,29 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="493.0" layoutY="53.0" prefHeight="33.0" prefWidth="89.0" text="Refesh" AnchorPane.rightAnchor="10.0">
+                        <JFXButton layoutX="493.0" layoutY="53.0" prefHeight="33.0" prefWidth="89.0" text="Clear" AnchorPane.rightAnchor="10.0">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Icon/Refresh.png" />
+                                    <Image url="@../Icon/clean.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </JFXButton>
                         <ScrollPane hmax="2.0" layoutX="7.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" styleClass="table_view" stylesheets="@../Css/Style.css" vmax="2.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
                            <content>
-                              <TableView prefHeight="600.0" prefWidth="720.0" styleClass="table_view" stylesheets="@../Css/Style.css">
+                              <TableView fx:id="table_reader" prefHeight="600.0" prefWidth="720.0" styleClass="table_view" stylesheets="@../Css/Style.css">
                                 <columns>
-                                  <TableColumn resizable="false" styleClass="column_header" text="ID" />
-                                  <TableColumn minWidth="80.0" prefWidth="85.0" resizable="false" styleClass="column_header" text="Name" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="Gender" />
-                                    <TableColumn styleClass="column_header" text="DateBirth" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="Address" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="Phone" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="R.Date" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="BarCode" />
-                                    <TableColumn resizable="false" styleClass="column_header" text="E.Date" />
+                                  <TableColumn fx:id="column_ID" prefWidth="70.0" resizable="false" text="ID" />
+                                    <TableColumn fx:id="column_EmpID" prefWidth="70.0" resizable="false" styleClass="column_header-background" text="EmpID" />
+                                  <TableColumn fx:id="column_Name" minWidth="80.0" prefWidth="70.0" text="Name" />
+                                    <TableColumn fx:id="column_Gender" prefWidth="70.0" resizable="false" text="Gender" />
+                                    <TableColumn fx:id="column_Birth" prefWidth="70.0" text="DateBirth" />
+                                    <TableColumn fx:id="column_Address" prefWidth="70.0" resizable="false" text="Address" />
+                                    <TableColumn fx:id="column_Phone" prefWidth="70.0" resizable="false" text="Phone" />
+                                    <TableColumn fx:id="column_RDate" prefWidth="70.0" resizable="false" text="R.Date" />
+                                    <TableColumn fx:id="column_DDate" prefWidth="70.0" resizable="false" text="D.Date" />
+                                    <TableColumn fx:id="column_Barcode" prefWidth="70.0" resizable="false" text="BarCode" />
                                 </columns>
                               </TableView>
                            </content>
@@ -146,9 +147,9 @@
             </AnchorPane>
             <Button fx:id="btn_ReaderTable" layoutX="22.0" layoutY="2.0" mnemonicParsing="false" onAction="#changeButtonStudentManagement" prefHeight="38.0" prefWidth="131.0" text="Readertable" />
             <Button fx:id="btn_ReaderLogin" layoutX="153.0" layoutY="2.0" mnemonicParsing="false" onAction="#changeButtonStudentManagement" prefHeight="38.0" prefWidth="131.0" text="ReaderLogin Table" />
-            <AnchorPane fx:id="subPane_ReaderLogin" layoutY="40.0" prefHeight="610.0" prefWidth="929.0" styleClass="maunen_subPane_ReaderLogin" stylesheets="@../Css/Style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <AnchorPane fx:id="subPane_ReaderLogin" layoutY="40.0" prefHeight="610.0" prefWidth="929.0" styleClass="maunen_subPane_ReaderLogin" stylesheets="@../Css/Style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
                <children>
-                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="289.0" styleClass="box" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="289.0" styleClass="box" stylesheets="@../Css/Style.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
                      <children>
                         <AnchorPane layoutX="78.0" layoutY="14.0" prefHeight="137.0" prefWidth="118.0">
                            <children>
